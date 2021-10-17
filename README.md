@@ -16,4 +16,4 @@ brave keyword_1 keyword_2 ...
 ## Installation
 1. Clone this repository or download zip file.
 2. Edit path to brave.exe if different.
-3. Add path to your Path environment variable in order to use anywhere.
+3. Add path to this directory to your Path environment variable in order to use the command anywhere.
