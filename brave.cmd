@@ -1,13 +1,14 @@
 @echo off
+
+set EXE_FILE="C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe"
+
 setlocal enabledelayedexpansion
 
-if "%1"=="" (
-    "C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe"
-) else (
-    set query=
-    for %%a in (%*) do (set query=!query!+%%a)
-
-    "C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe" https://www.google.com/search?q=!query:~1!
+set query=""
+for %%a in (%*) do (
+    set query=!query!+%%a
 )
+
+%EXE_FILE% "https://www.google.com/search?q=!query:~1!"
 
 endlocal
